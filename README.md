@@ -4,7 +4,11 @@ Yesterday I observed a weird [`DateInterval`](http://php.net/manual/en/class.dat
 
 After some digging I figured out it was related to timezones and only affected timezones ranging from `Europe/London` eastward all the way to `Pacific/Auckland`, however as soon as I used `Pacific/Honolulu` the issue was gone.
 
-### Example
+### Test findings
+
+All the tests in `tests/Timezones/America` and `tests/Timezones/Atlantic` pass. Another weird thing is that `Europe/London` fails whereas `Atlantric/Reykjavik` passes even though they are both UTC+0, with the exception that `Atlantric/Reykjavik` observes no daylight savings time (DST) in 2019 whereas `Europe/London` does.
+
+### Example of the problem
 
 ```php
 <?php
@@ -74,7 +78,7 @@ DateInterval Object
 ```
 ### Why is this such an issue?
 
-Because when we add the `DateInterval` with the `Europe/London` timezone to a `DateTime` that also has `Europe/Ljubljana` the addition is wrong.
+Because when we add the `DateInterval` with the `Europe/London` timezone to a `DateTime` that also has `Europe/Ljubljana` the addition is wrong and therefore unreliable.
 ```php
 <?php
 
