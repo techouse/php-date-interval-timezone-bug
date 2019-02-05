@@ -6,7 +6,9 @@ After some digging I figured out it was related to timezones and only affected t
 
 ### Test findings
 
-All the tests in `tests/Timezones/America` and `tests/Timezones/Atlantic` pass. Another weird thing is that `Europe/London` fails whereas `Atlantric/Reykjavik` passes even though they are both UTC+0, with the exception that `Atlantric/Reykjavik` observes no daylight savings time (DST) in 2019 whereas `Europe/London` does.
+All the tests in `tests/Timezones/America` and `tests/Timezones/Atlantic` pass. Another weird thing is that `Europe/London` passes all tests where it does not adhere to daylight savings time (`UTC+01:00`).
+
+From this I draw a conclusion that all timezones that are greater than `UTC+00:00` somehow fail.
 
 ### Example of the problem
 
@@ -78,7 +80,7 @@ DateInterval Object
 ```
 ### Why is this such an issue?
 
-Because when we add the `DateInterval` with the `Europe/London` timezone to a `DateTime` that also has `Europe/Ljubljana` the addition is wrong and therefore unreliable.
+Because when we add the `DateInterval` with the `Europe/London` timezone to a `DateTime` that also has `Europe/London` the addition is wrong and therefore unreliable.
 ```php
 <?php
 
