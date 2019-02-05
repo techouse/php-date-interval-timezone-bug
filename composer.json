@@ -8,11 +8,7 @@
             "email": "techouse@gmail.com"
         }
     ],
-    "require": {
-        "roave/security-advisories": "dev-master"
-    },
     "require-dev": {
-        "fzaninotto/faker": "^1.8.0",
         "phpunit/phpunit": "^8.0"
     },
     "autoload": {

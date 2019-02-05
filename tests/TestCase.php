@@ -2,7 +2,6 @@
 
 namespace Tests;
 
-use Faker\Factory;
 use PHPUnit\Framework\TestCase as BaseTestCase;
 
 /**
@@ -20,24 +19,6 @@ abstract class TestCase extends BaseTestCase
      * @var \Faker\Generator
      */
     protected $faker;
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->faker = $this->makeFaker();
-    }
-
-    /**
-     * Create a Faker instance for the given locale.
-     *
-     * @param  string $locale
-     * @return \Faker\Generator
-     */
-    protected function makeFaker($locale = null): \Faker\Generator
-    {
-        return Factory::create($locale ?? Factory::DEFAULT_LOCALE);
-    }
 
     /**
      * @param string $timezone
