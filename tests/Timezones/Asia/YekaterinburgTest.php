@@ -37,6 +37,26 @@ class YekaterinburgTest extends TestCase
     }
 
     /** @test */
+    public function january_addition(): void
+    {
+        $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-01-01 00:00:00');
+
+        $date2 = clone $date1;
+        $date2->modify('+5 week');
+        $this->assertEquals('2019-02-05 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $differenceDateInterval = $date1->diff($date2);
+
+        $date3 = clone $date1;
+        $date3->add($differenceDateInterval);
+        $this->assertEquals('2019-02-05 00:00:00', $date3->format('Y-m-d H:i:s'));
+
+        $this->assertNotEquals($date1, $date2);
+        $this->assertNotEquals($date1, $date3);
+        $this->assertEquals($date2, $date3);
+    }
+
+    /** @test */
     public function february(): void
     {
         $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-02-01 00:00:00');
@@ -49,6 +69,26 @@ class YekaterinburgTest extends TestCase
         $this->assertEquals(35, $differenceDateInterval->days);
         $this->assertEquals(1, $differenceDateInterval->m);
         $this->assertEquals(7, $differenceDateInterval->d);
+    }
+
+    /** @test */
+    public function february_addition(): void
+    {
+        $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-02-01 00:00:00');
+
+        $date2 = clone $date1;
+        $date2->modify('+5 week');
+        $this->assertEquals('2019-03-08 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $differenceDateInterval = $date1->diff($date2);
+
+        $date3 = clone $date1;
+        $date3->add($differenceDateInterval);
+        $this->assertEquals('2019-03-08 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $this->assertNotEquals($date1, $date2);
+        $this->assertNotEquals($date1, $date3);
+        $this->assertEquals($date2, $date3);
     }
 
     /** @test */
@@ -67,6 +107,26 @@ class YekaterinburgTest extends TestCase
     }
 
     /** @test */
+    public function march_addition(): void
+    {
+        $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-03-01 00:00:00');
+
+        $date2 = clone $date1;
+        $date2->modify('+5 week');
+        $this->assertEquals('2019-04-05 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $differenceDateInterval = $date1->diff($date2);
+
+        $date3 = clone $date1;
+        $date3->add($differenceDateInterval);
+        $this->assertEquals('2019-04-05 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $this->assertNotEquals($date1, $date2);
+        $this->assertNotEquals($date1, $date3);
+        $this->assertEquals($date2, $date3);
+    }
+
+    /** @test */
     public function april(): void
     {
         $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-04-01 00:00:00');
@@ -79,6 +139,26 @@ class YekaterinburgTest extends TestCase
         $this->assertEquals(35, $differenceDateInterval->days);
         $this->assertEquals(1, $differenceDateInterval->m);
         $this->assertEquals(5, $differenceDateInterval->d);
+    }
+
+    /** @test */
+    public function april_addition(): void
+    {
+        $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-04-01 00:00:00');
+
+        $date2 = clone $date1;
+        $date2->modify('+5 week');
+        $this->assertEquals('2019-05-06 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $differenceDateInterval = $date1->diff($date2);
+
+        $date3 = clone $date1;
+        $date3->add($differenceDateInterval);
+        $this->assertEquals('2019-05-06 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $this->assertNotEquals($date1, $date2);
+        $this->assertNotEquals($date1, $date3);
+        $this->assertEquals($date2, $date3);
     }
 
     /** @test */
@@ -97,6 +177,26 @@ class YekaterinburgTest extends TestCase
     }
 
     /** @test */
+    public function may_addition(): void
+    {
+        $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-05-01 00:00:00');
+
+        $date2 = clone $date1;
+        $date2->modify('+5 week');
+        $this->assertEquals('2019-06-05 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $differenceDateInterval = $date1->diff($date2);
+
+        $date3 = clone $date1;
+        $date3->add($differenceDateInterval);
+        $this->assertEquals('2019-06-05 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $this->assertNotEquals($date1, $date2);
+        $this->assertNotEquals($date1, $date3);
+        $this->assertEquals($date2, $date3);
+    }
+
+    /** @test */
     public function june(): void
     {
         $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-06-01 00:00:00');
@@ -109,6 +209,26 @@ class YekaterinburgTest extends TestCase
         $this->assertEquals(35, $differenceDateInterval->days);
         $this->assertEquals(1, $differenceDateInterval->m);
         $this->assertEquals(5, $differenceDateInterval->d);
+    }
+
+    /** @test */
+    public function june_addition(): void
+    {
+        $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-06-01 00:00:00');
+
+        $date2 = clone $date1;
+        $date2->modify('+5 week');
+        $this->assertEquals('2019-07-06 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $differenceDateInterval = $date1->diff($date2);
+
+        $date3 = clone $date1;
+        $date3->add($differenceDateInterval);
+        $this->assertEquals('2019-07-06 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $this->assertNotEquals($date1, $date2);
+        $this->assertNotEquals($date1, $date3);
+        $this->assertEquals($date2, $date3);
     }
 
     /** @test */
@@ -127,6 +247,26 @@ class YekaterinburgTest extends TestCase
     }
 
     /** @test */
+    public function july_addition(): void
+    {
+        $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-07-01 00:00:00');
+
+        $date2 = clone $date1;
+        $date2->modify('+5 week');
+        $this->assertEquals('2019-08-05 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $differenceDateInterval = $date1->diff($date2);
+
+        $date3 = clone $date1;
+        $date3->add($differenceDateInterval);
+        $this->assertEquals('2019-08-05 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $this->assertNotEquals($date1, $date2);
+        $this->assertNotEquals($date1, $date3);
+        $this->assertEquals($date2, $date3);
+    }
+
+    /** @test */
     public function august(): void
     {
         $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-08-01 00:00:00');
@@ -139,6 +279,26 @@ class YekaterinburgTest extends TestCase
         $this->assertEquals(35, $differenceDateInterval->days);
         $this->assertEquals(1, $differenceDateInterval->m);
         $this->assertEquals(4, $differenceDateInterval->d);
+    }
+
+    /** @test */
+    public function august_addition(): void
+    {
+        $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-08-01 00:00:00');
+
+        $date2 = clone $date1;
+        $date2->modify('+5 week');
+        $this->assertEquals('2019-09-05 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $differenceDateInterval = $date1->diff($date2);
+
+        $date3 = clone $date1;
+        $date3->add($differenceDateInterval);
+        $this->assertEquals('2019-09-05 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $this->assertNotEquals($date1, $date2);
+        $this->assertNotEquals($date1, $date3);
+        $this->assertEquals($date2, $date3);
     }
 
     /** @test */
@@ -157,6 +317,26 @@ class YekaterinburgTest extends TestCase
     }
 
     /** @test */
+    public function september_addition(): void
+    {
+        $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-09-01 00:00:00');
+
+        $date2 = clone $date1;
+        $date2->modify('+5 week');
+        $this->assertEquals('2019-10-06 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $differenceDateInterval = $date1->diff($date2);
+
+        $date3 = clone $date1;
+        $date3->add($differenceDateInterval);
+        $this->assertEquals('2019-10-06 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $this->assertNotEquals($date1, $date2);
+        $this->assertNotEquals($date1, $date3);
+        $this->assertEquals($date2, $date3);
+    }
+
+    /** @test */
     public function october(): void
     {
         $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-10-01 00:00:00');
@@ -169,6 +349,26 @@ class YekaterinburgTest extends TestCase
         $this->assertEquals(35, $differenceDateInterval->days);
         $this->assertEquals(1, $differenceDateInterval->m);
         $this->assertEquals(4, $differenceDateInterval->d);
+    }
+
+    /** @test */
+    public function october_addition(): void
+    {
+        $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-10-01 00:00:00');
+
+        $date2 = clone $date1;
+        $date2->modify('+5 week');
+        $this->assertEquals('2019-11-05 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $differenceDateInterval = $date1->diff($date2);
+
+        $date3 = clone $date1;
+        $date3->add($differenceDateInterval);
+        $this->assertEquals('2019-11-05 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $this->assertNotEquals($date1, $date2);
+        $this->assertNotEquals($date1, $date3);
+        $this->assertEquals($date2, $date3);
     }
 
     /** @test */
@@ -187,6 +387,26 @@ class YekaterinburgTest extends TestCase
     }
 
     /** @test */
+    public function november_addition(): void
+    {
+        $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-11-01 00:00:00');
+
+        $date2 = clone $date1;
+        $date2->modify('+5 week');
+        $this->assertEquals('2019-12-06 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $differenceDateInterval = $date1->diff($date2);
+
+        $date3 = clone $date1;
+        $date3->add($differenceDateInterval);
+        $this->assertEquals('2019-12-06 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $this->assertNotEquals($date1, $date2);
+        $this->assertNotEquals($date1, $date3);
+        $this->assertEquals($date2, $date3);
+    }
+
+    /** @test */
     public function december(): void
     {
         $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-12-01 00:00:00');
@@ -199,5 +419,25 @@ class YekaterinburgTest extends TestCase
         $this->assertEquals(35, $differenceDateInterval->days);
         $this->assertEquals(1, $differenceDateInterval->m);
         $this->assertEquals(4, $differenceDateInterval->d);
+    }
+
+    /** @test */
+    public function december_addition(): void
+    {
+        $date1 = DateTime::createFromFormat('Y-m-d H:i:s', '2019-12-01 00:00:00');
+
+        $date2 = clone $date1;
+        $date2->modify('+5 week');
+        $this->assertEquals('2020-01-05 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $differenceDateInterval = $date1->diff($date2);
+
+        $date3 = clone $date1;
+        $date3->add($differenceDateInterval);
+        $this->assertEquals('2020-01-05 00:00:00', $date2->format('Y-m-d H:i:s'));
+
+        $this->assertNotEquals($date1, $date2);
+        $this->assertNotEquals($date1, $date3);
+        $this->assertEquals($date2, $date3);
     }
 }

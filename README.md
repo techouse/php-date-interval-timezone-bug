@@ -4,7 +4,7 @@ Yesterday I observed a weird [`DateInterval`](http://php.net/manual/en/class.dat
 
 After some digging I figured out it was related to timezones and only affected timezones ranging from `Europe/London` eastward all the way to `Pacific/Auckland`, however as soon as I used `Pacific/Honolulu` the issue was gone.
 
-To give an example:
+### Example
 
 ```php
 <?php
@@ -129,3 +129,7 @@ DateTime Object
     [timezone] => Europe/London
 )
 ```
+
+### Test yourself
+
+Check the tests in the `tests` directory of this repo and run them with `phpunit`.
