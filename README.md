@@ -32,7 +32,7 @@ DateInterval Object
     [weekday_behavior] => 0
     [first_last_day_of] => 0
     [invert] => 0
-    [days] => 35 <--- not the amount of 35 days
+    [days] => 35 <--- note the amount of 35 days
     [special_type] => 0
     [special_amount] => 0
     [have_weekday_relative] => 0
