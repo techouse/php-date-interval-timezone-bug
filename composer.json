@@ -1,0 +1,27 @@
+{
+    "name": "techouse/php-date-interval-timezone-bug",
+    "description": "A demonstration of a nasty PHP DateInterval bug related to timezones and DST",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Klemen Tušar",
+            "email": "techouse@gmail.com"
+        }
+    ],
+    "require": {
+        "roave/security-advisories": "dev-master"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "^1.8.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}
