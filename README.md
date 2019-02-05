@@ -8,7 +8,7 @@ After some digging I figured out it was related to timezones and only affected t
 
 All the tests in `tests/Timezones/America` and `tests/Timezones/Atlantic` pass. Another weird thing is that `Europe/London` passes all tests where it does not adhere to daylight savings time (`UTC+01:00`).
 
-From this I draw a conclusion that all timezones that are greater than `UTC+00:00` somehow fail.
+From this I draw a conclusion that all timezones that are greater than `UTC+00:00` fail because of this additional time.
 
 ### Example of the problem
 
