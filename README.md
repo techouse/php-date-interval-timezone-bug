@@ -139,3 +139,7 @@ DateTime Object
 ### Test yourself
 
 Check the tests in the `tests` directory of this repo and run them with `phpunit`.
+
+## NOTES
+
+* I found that the [DateInterval tests in php-src](https://github.com/php/php-src/blob/master/ext/date/tests/DateInterval_format.phpt#L13) use `date_default_timezone_set('UTC')`. Maybe that's why nobody from the PHP core dev team never spotted this bug.
