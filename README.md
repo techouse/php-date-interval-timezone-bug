@@ -11,7 +11,7 @@ All the tests in `tests/Timezones/America` and `tests/Timezones/Atlantic` pass. 
 From this I draw a conclusion that all timezones that are greater than `UTC+00:00` fail because of this additional time.
 
 #### Update:
-My work colleague found out that this feature worked correctly from in PHP [5.3.0](http://php.net/releases/5_3_0.php), [5.3.1](http://php.net/releases/5_3_1.php) and [5.3.2](http://php.net/releases/5_3_2.php), however in [5.3.3](http://php.net/releases/5_3_3.php) we can already observe this bug in action. [See for yourself](https://3v4l.org/cupQV).
+My work colleague found out that this feature worked correctly in PHP [5.3.0](http://php.net/releases/5_3_0.php), [5.3.1](http://php.net/releases/5_3_1.php) and [5.3.2](http://php.net/releases/5_3_2.php), however in [5.3.3](http://php.net/releases/5_3_3.php) we can already observe this bug in action. [See for yourself](https://3v4l.org/cupQV).
 
 ### Example of the problem
 
